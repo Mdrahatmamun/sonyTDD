@@ -9,6 +9,8 @@ public class AutoClass extends BaseClass {
 	@Test
 	public void getAAutoQuote(){
 		
+		hPage.hompageSteps("ps4");
+		
 	}
 	
    
