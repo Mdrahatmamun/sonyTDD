@@ -21,7 +21,7 @@ public class BaseClass {
 	WebDriver driver;
 
 	protected CommonAction cAction;
-	 protected HomePage hPage;
+	protected HomePage hPage;
 
 	@BeforeMethod
 
@@ -34,7 +34,7 @@ public class BaseClass {
 				TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait((Integer.parseInt(configuration.getConfiguration("implicitWait"))),
 				TimeUnit.SECONDS);
-		 initClass();
+		initClass();
 	}
 
 	private WebDriver localDriver(String browserName) {
@@ -52,27 +52,22 @@ public class BaseClass {
 		}
 		return driver;
 	}
-		
-		private void initClass() {
-			cAction = new CommonAction();
-			hPage = new HomePage(driver, cAction);
-			
-		}
-		
-      protected WebDriver getDriver() {
-    	  
-	  return driver;
-      }
-		
-		
 
-	
-	
+	private void initClass() {
+		cAction = new CommonAction();
+		hPage = new HomePage(driver, cAction);
+
+	}
+
+	protected WebDriver getDriver() {
+
+		return driver;
+	}
 
 	@AfterMethod
 	public void terminate() throws InterruptedException {
 		Thread.sleep(6000);
-		driver.quit();
+		// driver.quit();
 
 	}
 
