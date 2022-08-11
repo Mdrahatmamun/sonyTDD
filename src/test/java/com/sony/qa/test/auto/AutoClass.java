@@ -7,7 +7,7 @@ import com.sony.qa.base.BaseClass;
 public class AutoClass extends BaseClass {
 
 	@Test
-	public void getAAutoQuote() {
+	public void getAutoQuote() {
 
 		hPage.hompageSteps("ps4");
 
